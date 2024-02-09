@@ -34,6 +34,15 @@ img {
     a {
         display: block;
         padding: .2rem;
+        transition: .4s;
+    }
+
+    a:hover {
+        transform: translate(0, -3px);
+    }
+
+    li:active {
+        background-color: aquamarine;
     }
 }
 
@@ -99,6 +108,10 @@ img {
             z-index: 1000;
             opacity: 1;
             transform: translate(0, 0);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #hamburger {
