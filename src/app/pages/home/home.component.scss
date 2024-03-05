@@ -1,0 +1,37 @@
+#home {
+    padding-top: 10.666666666666668rem;
+    padding-bottom: 13.333333333333334rem;
+    color: white;
+    transition: .6s;
+    font-size: 3.333rem;
+    line-height: 3.333rem;
+
+    @media (max-width: 410px) {
+        padding-top: 1.6666666666999994rem;
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        // transition: .6s;
+    }
+
+    @media screen and (min-width: 410px) and (max-width: 640px) {
+        padding-top: 1.6666666666999994rem;
+        font-size: 3rem;
+        line-height: 3rem;
+        // transition: .6s;
+    }
+    
+    @media screen and (min-width: 640px) and (max-width: 788px) {
+        padding-top: 4rem;
+        // transition: .6s;
+    }
+    
+    @media screen and (min-width: 788px) and (max-width: 926px) {
+        padding-top: 6rem;
+        // transition: .6s;
+    }
+}
+
+.introducao {
+    padding: 0 1.66667rem;
+    font-family: 'Inter ExtraLight', sans-serif;
+}
