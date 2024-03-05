@@ -23,7 +23,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #141414;
+    background-color: transparent;
 }
 
 #menu {
@@ -58,7 +58,7 @@ img {
         top: 70px;
         right: 0px;
         background-color: #141414;
-        transition: .6s;
+        transition: .4s;
         z-index: -1;
         visibility: hidden;
         overflow-y: hidden;
