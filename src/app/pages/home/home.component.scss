@@ -1,37 +1,39 @@
 #home {
     padding-top: 10.666666666666668rem;
-    padding-bottom: 13.333333333333334rem;
+    padding-bottom: 14.333333333333334rem;
     color: white;
     transition: .6s;
     font-size: 3.333rem;
     line-height: 3.333rem;
+    
+    // Pra alinhar conteudo ao centro sem precisar dos padding, mas ta bugando na estilização 
+    // height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
 
-    @media (max-width: 410px) {
-        padding-top: 1.6666666666999994rem;
-        font-size: 2.5rem;
-        line-height: 2.5rem;
-        // transition: .6s;
+    @media (max-width: 440px) {
+        padding-top: 3rem;
+        font-size: 2.6rem;
+        line-height: 2.6rem;
     }
 
-    @media screen and (min-width: 410px) and (max-width: 640px) {
-        padding-top: 1.6666666666999994rem;
+    @media screen and (min-width: 440px) and (max-width: 656px) {
+        padding-top: 5rem;
+        padding-bottom: 7rem;
         font-size: 3rem;
         line-height: 3rem;
-        // transition: .6s;
     }
     
-    @media screen and (min-width: 640px) and (max-width: 788px) {
-        padding-top: 4rem;
-        // transition: .6s;
-    }
-    
-    @media screen and (min-width: 788px) and (max-width: 926px) {
-        padding-top: 6rem;
-        // transition: .6s;
+    @media screen and (min-width: 656px) and (max-width: 788px) {
+        padding-top: 7rem;
+        padding-bottom: 8rem;
     }
 }
 
 .introducao {
     padding: 0 1.66667rem;
     font-family: 'Inter ExtraLight', sans-serif;
+    text-align: left;
 }
