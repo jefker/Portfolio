@@ -1,39 +1,105 @@
 #home {
-    padding-top: 10.666666666666668rem;
-    padding-bottom: 14.333333333333334rem;
-    color: white;
-    transition: .6s;
-    font-size: 3.333rem;
-    line-height: 3.333rem;
-    
-    // Pra alinhar conteudo ao centro sem precisar dos padding, mas ta bugando na estilização 
-    // height: 100vh;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
-
-    @media (max-width: 440px) {
-        padding-top: 3rem;
-        font-size: 2.6rem;
-        line-height: 2.6rem;
-    }
-
-    @media screen and (min-width: 440px) and (max-width: 656px) {
-        padding-top: 5rem;
-        padding-bottom: 7rem;
-        font-size: 3rem;
-        line-height: 3rem;
-    }
-    
-    @media screen and (min-width: 656px) and (max-width: 788px) {
-        padding-top: 7rem;
-        padding-bottom: 8rem;
-    }
-}
-
-.introducao {
     padding: 0 1.66667rem;
     font-family: 'Inter ExtraLight', sans-serif;
-    text-align: left;
+    color: #6d6d6d;
+    
+    .introducao {
+        transition: .6s;
+        font-size: 3.333rem;
+        line-height: 3.333rem;
+        text-align: left;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        #meuNome {
+            color: white;
+        }
+    
+        @media (max-width: 350px) {
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+        }
+
+        @media screen and (min-width: 350px) and (max-width: 440px) {
+            font-size: 2.6rem;
+            line-height: 2.6rem;
+        }
+    
+        @media (min-width: 440px) {
+            font-size: 3rem;
+            line-height: 3rem;
+        }
+    }
+
+    .job {
+        h2 {
+            padding: 12px 0;
+            margin: 0;
+        }
+
+        p {
+            font-family: 'Inter Medium', sans-serif;
+            margin: 0;
+        }
+
+        #tags {
+            p {
+                background-color: #ffffff4b;
+                color: black;
+                display: inline-block;
+                padding: 5px 10px;
+                margin-right: 10px;
+                margin-bottom: 5px;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                line-height: 0.8rem;
+                font-family: 'Inter SemiBold', sans-serif;
+                cursor: pointer;
+                transition: .3s;
+
+                @media (max-width: 680px) {
+                    font-size: 0.66rem;
+                    line-height: 0.66rem;
+                }
+            }
+
+            p:last-child {
+                margin-right: 0; 
+            }
+
+            p:hover {
+                background-color: rgb(255, 255, 255);
+                transition: .3s;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin: 12px 0;
+            max-width: 1920px;
+        }
+
+        #descricao {
+            display: flex;
+            flex-wrap: wrap;
+
+            .informacoes, .legenda {
+                flex: 50%;
+            }
+            
+            @media (max-width: 800px) {
+                .informacoes, .legenda {
+                    flex: 100%;
+                }
+
+                .legenda {
+                    padding-top: 12px;
+                    transition: .6s;
+                }
+            }
+        }
+    }
 }
+
