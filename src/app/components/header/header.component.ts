@@ -1,4 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,8 @@ export class HeaderComponent {
   
   constructor(
     private elRef: ElementRef,
-    private renderer: Renderer2
+    private renderer: Renderer2,
+    private router: Router,
   ) {}
     
   ngOnInit() {
@@ -32,5 +34,15 @@ export class HeaderComponent {
     } else {
       this.renderer.addClass(nav, 'active');
     }
-  }  
+  }
+  
+  redirecionar() {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        if (event.url === '/' || event.url === '/home') {
+          window.scrollTo(0, 0);
+        }
+      }
+    });
+  }
 }
