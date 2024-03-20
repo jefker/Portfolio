@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,13 @@ export class HomeComponent implements OnInit {
     setTimeout(() => {
       this.escreverTexto();
     }, 1000);
+
+    this.aparicaoSection();
   }
+
+  constructor(
+    private router: Router,
+  ) {}
 
   escreverTexto() {
     if (!this.texto || !this.texto.nativeElement) return;
@@ -35,5 +42,21 @@ export class HomeComponent implements OnInit {
       }
     }, tempoAparicaoletras);
   }
-}
 
+  aparicaoSection(): void {
+    const myObserver = new IntersectionObserver((entries) => {
+      console.log(entries)
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          (entry.target as Element).classList.replace('job', 'job-show');
+        }
+      })
+    })
+    
+    const elements = document.querySelectorAll('.job')
+    
+    elements.forEach((element) => {
+      myObserver.observe(element);
+    });
+  }
+}

@@ -2,16 +2,28 @@
     padding: 0 1.66667rem;
     font-family: 'Inter ExtraLight', sans-serif;
     color: #6d6d6d;
+
+    h2 {
+        padding: 12px 0;
+        margin: 0;
+        color: white;
+        font-family: 'Inter Thin', sans-serif;
+    }
+    
+    p {
+        font-family: 'Inter Medium', sans-serif;
+        margin: 0;
+    }
     
     .introducao {
         transition: .6s;
         font-size: 3.333rem;
         line-height: 3.333rem;
         text-align: left;
-        height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        min-height: 100vh;
 
         #meuNome {
             color: white;
@@ -34,134 +46,172 @@
     }
 
     .job {
-        padding-bottom: 50px;
-
-        h2 {
-            padding: 12px 0;
-            margin: 0;
-        }
-
-        p {
-            font-family: 'Inter Medium', sans-serif;
-            margin: 0;
-        }
-
-        #tags {
-            p {
-                background-color: #ffffff4b;
-                color: black;
-                display: inline-block;
-                padding: 5px 10px;
-                margin-right: 10px;
-                margin-bottom: 5px;
-                border-radius: 50px;
-                font-size: 0.8rem;
-                line-height: 0.8rem;
-                font-family: 'Inter SemiBold', sans-serif;
-                cursor: pointer;
-                transition: .3s;
-
-                @media (max-width: 680px) {
-                    font-size: 0.66rem;
-                    line-height: 0.66rem;
-                }
-            }
-
-            p:last-child {
-                margin-right: 0; 
-            }
-
-            p:hover {
-                background-color: rgb(255, 255, 255);
-                transition: .3s;
-            }
-        }
-
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
         
-        .galeria {
-            display: flex;
-            margin: 12px 0;
-
-            img {
-                transition: .2s;
-            }
-
-            img:hover {
-                transition: .4s;
-                transform: scale(103%);
-                cursor: pointer;
-            }
-
-            .imagem-principal {
-                flex: 1;
-                max-width: 65%;
-            }
-
-            #miniatura {
-                display: flex;
-                flex-direction: column;
-
-                .imagem-miniatura {
-                    width: 100%; /* Ajustar largura de acordo com a necessidade */
-                    height: 100%; /* Ajustar altura de acordo com a necessidade */
-                }
-            }
-
-            @media (max-width: 700px) {
-                .imagem-principal {
-                    max-width: 100%;
-                }
-
-                #miniatura {
-                    visibility: hidden;
-                }
-            }
-        }
-
-        #descricao {
-            display: flex;
-            flex-wrap: wrap;
-
-            .informacoes, .legenda {
-                flex: 50%;
-            }
-            
-            @media (max-width: 800px) {
-                .informacoes, .legenda {
-                    flex: 100%;
-                }
-
-                .legenda {
-                    padding-top: 12px;
-                    transition: .6s;
-                }
-            }
-        }
-
-        #botao-ver-mais {
-            display: flex;
-
-            button {
-                padding: 10px 20px;
-                border-radius: 50px;
-                transform: translate(0, -5vh);
-            }
+        opacity: 0;
+        filter: blur(4px);
+        transform: translateY(10%);
+        transition: all 1s;    
+    }
     
+    .job-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+        transition: all 1s;
+    }
+
+    .tags {
+        p {
+            background-color: #ffffff2c;
+            color: black;
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            font-family: 'Inter SemiBold', sans-serif;
+            cursor: pointer;
+            transition: .3s;
+
+            @media (max-width: 680px) {
+                font-size: 0.66rem;
+                line-height: 0.66rem;
+            }
+        }
+
+        p:last-child {
+            margin-right: 0; 
+        }
+
+        p:hover {
+            background-color: rgb(255, 255, 255);
+            transition: .3s;
+        }
+    }
+
+    .galeria {
+        display: flex;
+        justify-content: center;
+        margin: 12px 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        img:hover {
+            transition: .4s;
+            transform: scale(1.1);
+        }
+
+        .principal {
+            display: flex;
+            justify-content: center;
+            width: 76%;
+            overflow: hidden;
+        }
+
+        .miniatura {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 35%;
+            
+            .imagem-miniatura {
+                overflow: hidden;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .principal {
+                width: 100%;
+            }
+
+            .miniatura {
+                display: none;
+            }
+        }
+    }
+    
+    .descricao {
+        display: flex;
+        flex-wrap: wrap;
+
+        .informacoes, .legenda {
+            flex: 50%;
+
+            small {
+                color: white;
+            }
+        }
+
+        .informacoes {
+            display: grid;
+            align-content: space-between;
         }
 
         @media (max-width: 800px) {
-            #botao-ver-mais {
-                justify-content: end;
-
-                button {
-                    margin-top: 3%;
-                    transform: translate(0, 0);
-                }
+            .informacoes, .legenda {
+                flex: 100%;
             }
 
+            .legenda {
+                padding-top: 12px;
+                transition: .6s;
+            }
         }
-        
     }
 
+    button {
+        padding: 11px 35px 10px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+        font-family: 'Inter Regular', sans-serif;
+        color: white;
+        background: #141414;
+        border: solid 1px white;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+    
+    button:hover {
+        background-image: linear-gradient(346deg, #212121, #353535);
+        border: solid 1px #373737;
+        transition: 0.2s ease-in-out;
+    }
+
+    .botaoMobile {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        .botaoMobile {
+            display: flex;
+            justify-content: end;
+            margin-top: 20px;
+            font-size: 0.5rem;
+            line-height: 0.5rem;
+        }
+
+        .botaoDesktop {
+            display: none;
+        }
+    }
 }
+
+
 
