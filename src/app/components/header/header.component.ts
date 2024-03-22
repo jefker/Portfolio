@@ -36,13 +36,11 @@ export class HeaderComponent {
     }
   }
   
-  redirecionar() {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if (event.url === '/' || event.url === '/home') {
-          window.scrollTo(0, 0);
-        }
-      }
-    });
-  }
+  rolarParaTopo() {
+    const options: ScrollToOptions = {
+      behavior: 'smooth',
+      top: 0,
+    };
+  
+    window.scrollTo(options);  }
 }

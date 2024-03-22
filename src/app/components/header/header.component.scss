@@ -21,13 +21,23 @@ img:hover {
 }
 
 #header {
-    box-sizing: border-box;
     height: 70px;
-    padding: 1.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: transparent;
+    
+    .container {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1170px;
+        padding: 1.66667rem;
+        box-sizing: border-box;
+        z-index: 999;
+    }
 }
 
 
@@ -53,6 +63,10 @@ img:hover {
 }
 
 @media (max-width: 960px) {
+    #header .container {
+        background-color: #141414;
+    }
+
     #menu {
         display: block;
         position: absolute;
