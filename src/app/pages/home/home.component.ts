@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
 
   aparicaoSection(): void {
     const myObserver = new IntersectionObserver((entries) => {
-      console.log(entries)
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           (entry.target as Element).classList.replace('job', 'job-show');
