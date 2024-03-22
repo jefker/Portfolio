@@ -1,0 +1,237 @@
+#home {
+    padding: 0 1.66667rem;
+    font-family: 'Inter ExtraLight', sans-serif;
+    color: #6d6d6d;
+
+    h2 {
+        padding: 12px 0;
+        margin: 0;
+        color: white;
+        font-family: 'Inter Thin', sans-serif;
+    }
+    
+    p {
+        font-family: 'Inter Medium', sans-serif;
+        margin: 0;
+    }
+    
+    .introducao {
+        transition: .6s;
+        font-size: 3rem;
+        line-height: 3rem;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 92vh;
+
+        #meuNome {
+            color: white;
+        }
+
+        @media (max-width: 350px) {
+            font-size: 2.2rem;
+            line-height: 2.2rem;
+        }
+
+        @media screen and (min-width: 350px) and (max-width: 440px) {
+            font-size: 2.6rem;
+            line-height: 2.6rem;
+        }
+    }
+
+    .job {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+        
+        opacity: 0;
+        filter: blur(4px);
+        transform: translateY(15%);
+        transition: all 0.7s;    
+    }
+    
+    .job-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 100vh;
+
+        opacity: 1;
+        filter: blur(0px);
+        transform: translateY(0);
+        transition: all 1s;
+
+        @media (max-width: 700px) {
+            h2 {
+                padding-bottom: 6px;
+            }
+        }
+    }
+
+    .tags {
+        p {
+            background-color: #ffffff2c;
+            color: black;
+            display: inline-block;
+            padding: 5px 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            line-height: 0.8rem;
+            letter-spacing: .01rem;
+            font-family: 'Inter SemiBold', sans-serif;
+            cursor: pointer;
+            transition: .3s;
+
+            @media (max-width: 680px) {
+                font-size: 0.66rem;
+                line-height: 0.66rem;
+            }
+        }
+
+        p:last-child {
+            margin-right: 0; 
+        }
+
+        p:hover {
+            background-color: rgb(255, 255, 255);
+            transition: .3s;
+        }
+    }
+
+    .galeria {
+        display: flex;
+        align-items: center;
+        margin: 12px 0;
+        width: 100%;
+        max-height: 500px;
+
+        img {
+            cursor: pointer;
+            transition: .2s;
+            object-fit: contain;
+        }
+
+        img:hover {
+            transition: .4s;
+            transform: scale(calc(1 + 0.1));
+        }
+
+        .principal {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            float: left;
+            overflow: hidden;
+            width: 66.66666667%;
+            max-height: 500px;
+        }
+        
+        .miniatura {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 33.33333333%;
+            float: left;
+            
+            .imagem-miniatura {
+                display: flex;
+                justify-content: center;
+                height: 250px;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
+        @media (max-width: 700px) {
+            .principal {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .miniatura {
+                display: none;
+            }
+        }
+    }
+    
+    .descricao {
+        display: flex;
+        flex-wrap: wrap;
+
+        .informacoes, .legenda {
+            flex: 50%;
+
+            small {
+                color: white;
+            }
+        }
+
+        .informacoes {
+            display: grid;
+            align-content: space-between;
+        }
+
+        @media (max-width: 800px) {
+            .informacoes, .legenda {
+                flex: 100%;
+            }
+
+            .legenda {
+                padding-top: 12px;
+                transition: .6s;
+            }
+        }
+    }
+
+    button {
+        padding: 11px 35px 10px;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+        font-family: 'Inter Regular', sans-serif;
+        font-weight: 600;
+        color: #6d6d6d;
+        background: #141414;
+        border: solid 2px #6d6d6d;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    button:hover {
+        background-color: white;
+        border: solid 2px white;
+        transition: 0.2s;
+        color: #141414;
+    }
+
+    .botaoMobile {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        .botaoMobile {
+            display: flex;
+            justify-content: end;
+            margin-top: 20px;
+            font-size: 0.5rem;
+            line-height: 0.5rem;
+        }
+
+        .botaoDesktop {
+            display: none;
+        }
+    }
+}
+
+
+
