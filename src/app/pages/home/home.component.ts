@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.escreverTexto();
-    }, 1000);
+    }, 850);
 
     this.aparicaoSection();
   }
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
     const texto1 = "Designer gráfico e desenvolvedor front end que ama se aventurar em novos projetos e experiências. Atuo como dev na maior parte do tempo e trabalho como freelancer nas horas vagas.";
     
     let index = 0;
-    const tempoAparicaoletras = 30;
+    const tempoAparicaoletras = 25;
 
     const interval = setInterval(() => {
       if (index < texto1.length) {
