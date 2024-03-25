@@ -11,3 +11,13 @@ body {
     padding: 0px;
     max-width: 1170px;
 }
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: rgb(31, 31, 31);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ffffff4b;
+    border-radius: 5px;
+}
