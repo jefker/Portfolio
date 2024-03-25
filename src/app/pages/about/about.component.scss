@@ -1,34 +1,185 @@
 #about {
     padding: 0 1.66667rem;
-    font-family: 'Inter ExtraLight', sans-serif;
+    font-family: 'Inter Light', sans-serif;
     color: #6d6d6d;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .resumo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
 
-    min-height: 92vh;
+        p {
+            font-size: 1.5rem;
+        }
 
-    p {
-        font-family: 'Inter Medium', sans-serif;
-        margin: 0;
-    }
-
-    .introducao {
-        width: 100%;
-    }
-
-    .principal {
-        width: 100%;
+        .texto {
+            width: 100%;
+            padding-right: 100px;
+    
+            button {
+                padding: 10px 25px;
+                background: #141414;
+                border: solid 2px #6d6d6d;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            
+            button:hover {
+                background-color: rgba(255, 255, 255, 0.101);
+                border: solid 2px white;
+                transition: 0.2s;
+            }
         
-        img {
-            max-width: 400px;
+            #botaoIdioma {
+                display: flex;
+
+                img {
+                    max-width: 3vh;
+                }
+      
+                .botaoPt {
+                    border-radius: 50px 0 0 50px;
+                    border-right: none;
+                    height: 45px;
+                    width: 80px;
+                    background-image: url("../../../assets/img/br.ico");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 3vh;
+                }
+
+                .botaoPt-ativo {
+                    border-radius: 50px 0 0 50px;
+                    border-right: none;
+                    height: 45px;
+                    width: 80px;
+                    background-image: url("../../../assets/img/br_Preto.ico");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 3vh;
+                    background-color: white;
+                    border: solid 2px white;
+                }
+        
+                .botaoUs {
+                    border-radius: 0 50px 50px 0;
+                    border-left: none;
+                    height: 45px;
+                    width: 80px;
+                    background-image: url("../../../assets/img/us.ico");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 3vh;
+                }
+
+                .botaoUs-ativo {
+                    border-radius: 0 50px 50px 0;
+                    border-left: none;
+                    height: 45px;
+                    width: 80px;
+                    background-image: url("../../../assets/img/us_Preto.ico");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 3vh;
+                    background-color: white;
+                    border: solid 2px white;
+                }
+
+            }
+
+        }
+        
+        .foto {
+            display: flex;
+            justify-content: end;
+            width: 100%;
+            
+            img {
+                max-width: 400px;
+                width: 100%;
+            }
         }
     }
 
-    @media (max-width: 700px) {
-        .principal {
-            width: 100%;
+    @media screen and (min-width: 825px) and (max-width: 950px) {
+        .resumo {
+            .texto #botaoIdioma {
+                .botaoPt {
+                    height: 35px;
+                    width: 70px;
+                    background-size: 2.5vh;
+                }
+
+                .botaoPt-ativo {
+                    height: 35px;
+                    width: 70px;
+                    background-size: 2.5vh;
+                }
+
+                .botaoUs {
+                    height: 35px;
+                    width: 70px;
+                    background-size: 2.5vh;
+                }
+
+                .botaoUs-ativo {
+                    height: 35px;
+                    width: 70px;
+                    background-size: 2.5vh;
+                }
+            }
+
+            p {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @media (max-width: 825px) {
+        .resumo {
+            display: grid;
+            min-height: none;
+            padding-top: 3vh;
+
+            p {
+                font-size: 1.1rem;
+            }
+
+            .texto {
+                padding-right: 40px;
+
+                #botaoIdioma {
+                    .botaoPt {
+                        height: 30px;
+                        width: 65px;
+                        background-size: 2.2vh;
+                    }
+    
+                    .botaoPt-ativo {
+                        height: 30px;
+                        width: 65px;
+                        background-size: 2.2vh;
+                    }
+    
+                    .botaoUs {
+                        height: 30px;
+                        width: 65px;
+                        background-size: 2.2vh;
+                    }
+    
+                    .botaoUs-ativo {
+                        height: 30px;
+                        width: 65px;
+                        background-size: 2.2vh;
+                    }
+                }
+            }
+
+            .foto img {
+                max-width: 300px;
+            }
         }
     }
 }
+

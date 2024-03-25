@@ -1,8 +1,15 @@
 <section id="about">
-    <div class="introducao">
-        <p>Olá, eu sou Jefte. </p>
-    </div>
-    <div class="principal">
-        <img src="assets/img/IMG.png">
+    <div class="resumo">
+        <div class="texto">
+            <section id="botaoIdioma">
+                <button class="botaoPt" #botaoPt (click)="alterarIdioma(1)"></button>
+                <button class="botaoUs" #botaoUs (click)="alterarIdioma(2)"></button>
+            </section>
+    
+            <p #textoResumo></p>
+        </div>
+        <div class="foto">
+            <img src="assets/img/IMG.png">
+        </div>
     </div>
 </section>
