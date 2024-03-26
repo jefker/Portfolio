@@ -1,0 +1,47 @@
+
+#footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1.66667rem 0;
+}
+
+.divisao {
+    content: "";
+    border-top: solid 1px #ffffff4b;
+    width: 100%;
+}
+
+#conteudo {
+    padding: 3rem 0 5rem;
+    color: white;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        display: grid;
+
+        a:last-child {
+            padding-bottom: 0;
+        }
+    }
+    
+    a {
+        color: #ffffff4b;
+        text-decoration: none;
+        padding-bottom: 10px;
+    }
+    
+    a:hover {
+        color: white;
+    }
+    
+    p {
+        margin: 0;
+        padding-bottom: 10px;
+    }
+}
