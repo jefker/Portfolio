@@ -25,7 +25,6 @@ img:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent;
     
     .container {
         position: fixed;
@@ -37,6 +36,7 @@ img:hover {
         padding: 1.66667rem;
         box-sizing: border-box;
         z-index: 999;
+        background-color: #141414;
     }
 }
 
@@ -45,6 +45,10 @@ img:hover {
     display: flex;
     list-style: none;
     gap: 1.5rem;
+
+    li:last-child a {
+        padding-right: 0;
+    }
 
     a {
         display: block;
