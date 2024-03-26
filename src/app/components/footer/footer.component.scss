@@ -17,7 +17,6 @@
     color: white;
     font-size: 0.8rem;
     display: flex;
-    justify-content: space-between;
     width: 100%;
 
     ul {
@@ -43,5 +42,21 @@
     p {
         margin: 0;
         padding-bottom: 10px;
+    }
+
+    .social {
+        width: 40%;
+    }
+    
+    .outros {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 600px) {
+            display: grid;
+            justify-content: end;
+            align-content: space-between;
+        }
     }
 }
