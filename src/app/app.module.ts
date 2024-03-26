@@ -10,6 +10,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DesignComponent } from './pages/design/design.component';
 import { WebdevComponent } from './pages/webdev/webdev.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { WebdevComponent } from './pages/webdev/webdev.component';
     AboutComponent,
     HeaderComponent,
     DesignComponent,
-    WebdevComponent
+    WebdevComponent,
+    FooterComponent
   ],
   
   imports: [
